@@ -9,26 +9,62 @@
         body {
             background-color: #e0e0e0; /* 薄いグレーの背景 */
             color: #333;
-            font-family: "Hiragino Mincho ProN", "MS PMincho", serif; /* 報告書らしく明朝体系 */
+            font-family: "Hiragino Mincho ProN", "MS PMincho", serif;
             line-height: 1.6;
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
+        }
+
+        /* 1. 犯人を一番目立たせるセクション */
+        .culprit-header {
+            height: 50vh; /* ページの半分（50%）を使用 */
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #e0e0e0;
+        }
+
+        .culprit-title {
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+        }
+
+        .culprit-names {
+            font-size: 3rem; /* 犯人名を巨大に */
+            font-weight: bold;
+            color: #d93025; /* 警告の赤 */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .scroll-hint {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
+
+        /* 2. 報告書本体（ページ後半から開始） */
+        .report-wrapper {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 100px;
         }
 
         .report-container {
-            background-color: #ffffff; /* 報告書本体は白 */
+            background-color: #ffffff;
             width: 100%;
             max-width: 800px;
-            padding: 50px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            box-sizing: border-box;
+            padding: 60px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.15);
             border: 1px solid #ccc;
+            position: relative;
         }
 
-        /* ロゴとタイトル部分のレイアウト */
+        /* 3. 報告書の開始と同時にロゴを左に配置 */
         .header-section {
             display: flex;
             align-items: flex-start;
@@ -38,31 +74,30 @@
         }
 
         .logo {
-            width: 120px; /* ロゴのサイズ調整 */
+            width: 100px;
             height: auto;
             margin-right: 20px;
         }
 
-        .header-text {
+        .agency-info {
             flex: 1;
         }
 
         .agency-name {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
-            letter-spacing: 0.1em;
-            margin-bottom: 5px;
+            letter-spacing: 0.05em;
         }
 
-        .report-title {
-            font-size: 24px;
+        .report-type {
+            font-size: 22px;
             font-weight: bold;
-            margin: 10px 0 5px 0;
+            margin-top: 5px;
         }
 
         .case-info {
             font-family: monospace;
-            font-size: 14px;
+            font-size: 13px;
             background: #f9f9f9;
             padding: 15px;
             border: 1px solid #eee;
@@ -73,13 +108,8 @@
             font-size: 18px;
             border-left: 5px solid #333;
             padding-left: 10px;
-            margin-top: 30px;
+            margin-top: 40px;
             background: #f4f4f4;
-        }
-
-        .highlight-red {
-            color: #d93025;
-            font-weight: bold;
         }
 
         .signature {
@@ -89,111 +119,70 @@
             padding-top: 20px;
         }
 
-        .footer-note {
-            font-size: 12px;
-            color: #888;
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        /* 導線解説セクション（少し雰囲気を変える） */
         .walkthrough {
             margin-top: 60px;
             padding: 30px;
-            background-color: #f0f0f0;
-            border-radius: 8px;
-        }
-
-        .walkthrough h3 {
-            border-bottom: 1px solid #aaa;
-            padding-bottom: 10px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            border: 1px dashed #ccc;
         }
 
         @media (max-width: 600px) {
-            .header-section { flex-direction: column; align-items: center; text-align: center; }
-            .logo { margin-right: 0; margin-bottom: 20px; }
+            .culprit-names { font-size: 2rem; }
             .report-container { padding: 20px; }
+            .logo { width: 70px; }
         }
     </style>
 </head>
 <body>
 
-<div class="report-container">
-    <div class="header-section">
-        <img src="logo.png" alt="ZNIB LOGO" class="logo">
-        <div class="header-text">
-            <div class="agency-name">ZALVIAN NATIONAL INVESTIGATION BUREAU</div>
-            <div class="report-title">FINAL REPORT / 最終報告書</div>
+    <div class="culprit-header">
+        <div class="culprit-title">COLD CASE: SMITH 真犯人</div>
+        <div class="culprit-names">
+            クロエ・デイビス<br>
+            リアム・オコネル
         </div>
+        <div class="scroll-hint">▼ 詳細報告書を確認する</div>
     </div>
 
-    <div class="case-info">
-        CASE FILE: Z-826-HM<br>
-        CASE TITLE: Cold Case :Smith<br>
-        FILED BY: ETHAN RYKER SPECIAL INVESTIGATOR<br>
-        DATE: 09-05-Z2025<br>
-        CLASSIFICATION: CONFIDENTIAL
-    </div>
+    <div class="report-wrapper">
+        <div class="report-container">
+            <div class="header-section">
+                <img src="logo.png" alt="ZNIB LOGO" class="logo">
+                <div class="agency-info">
+                    <div class="agency-name">ZALVIAN NATIONAL INVESTIGATION BUREAU</div>
+                    <div class="report-type">FINAL REPORT / 最終報告書</div>
+                </div>
+            </div>
 
-    <p>
-        cold case:Smithの犯人は、<br>
-        <span class="highlight-red">クロエ・デイビス</span> および <span class="highlight-red">リアム・オコネル</span> である。
-    </p>
+            <div class="case-info">
+                CASE FILE: Z-826-HM<br>
+                CASE TITLE: Cold Case :Smith<br>
+                FILED BY: ETHAN RYKER SPECIAL INVESTIGATOR<br>
+                DATE: 09-05-Z2025<br>
+                CLASSIFICATION: CONFIDENTIAL
+            </div>
 
-    <h2>1. 概要 OVERVIEW</h2>
-    <p>本報告は、10年前に発生した「スミス家夫婦殺害事件」に関する再捜査の最終結果を記録したものである。新たに押収された証拠および関係者の供述の精査により、クロエ・デイビスとリアム・オコネルの共犯関与が立証され、両名は逮捕された。</p>
+            <h2>1. 概要 OVERVIEW</h2>
+            <p>本報告は、10年前に発生した「スミス家夫婦殺害事件」に関する再捜査の最終結果を記録したものである。クロエ・デイビスとリアム・オコネルの共犯関与が立証された。</p>
 
-    <h2>2. 証拠分析 EVIDENCE ANALYSIS</h2>
-    <ul>
-        <li>ソフィア・トンプソン宅のガレージに保管されていた段ボールを押収。内部から血痕の付いた衣類数点、分解状態の拳銃、及びナイフを発見。</li>
-        <li>DNA鑑定の結果、血痕はスミス夫妻のものと一致。</li>
-        <li>電気使用量記録（8月25日19時の異常値）は、遺体冷却のために冷房が強稼働されたことを示す。</li>
-        <li>水道使用量記録（8月25日20時の異常値）は、浴槽での流水および氷投入による偽装工作を示す。</li>
-        <li>関係者のアリバイ表との照合により、複数の虚偽供述が判明。</li>
-    </ul>
+            <h2>2. 証拠分析 EVIDENCE ANALYSIS</h2>
+            <p>ソフィア・トンプソン宅から押収された段ボールより、血痕の付いた衣類、拳銃、ナイフを発見。DNAは被害者夫妻と一致。電気・水道の使用量記録が犯行時刻の工作を裏付けている。</p>
 
-    <h2>3. 供述要約 STATEMENT SUMMARY</h2>
-    <p><strong>8月25日 19時頃（事件当日）</strong><br>
-    クロエ・デイビスがマイケル・スミスを銃で殺害。冷房を強く稼働させ遺体を冷却し、その後カフェでアリバイを構築した。同時刻、リアム・オコネルは第三者との買い物によりアリバイを確保していた。</p>
-    
-    <p><strong>8月25日 20時頃</strong><br>
-    エミリー・スミスが帰宅。リアム・オコネルはナイフで殺害後、遺体を浴槽で冷却し、死亡推定時刻を不明瞭にした。</p>
+            <h2>3. 供述要約 STATEMENT SUMMARY</h2>
+            <p><strong>19:00：</strong>クロエが銃で殺害。冷房で遺体を冷却。<br>
+               <strong>20:00：</strong>リアムが帰宅したエミリーをナイフで殺害。浴槽で冷却し死亡推定時刻を偽装。<br>
+               <strong>21:00：</strong>両名は映画館でアリバイを工作。終了後に路上で証拠品を授受。<br>
+               <strong>発見当日：</strong>クロエが遠隔操作でエアコンを停止し、腐敗を進行させた。</p>
 
-    <p><strong>同日 21時〜23時頃</strong><br>
-    両名は映画館に赴き、互いのアリバイを補強。終了後に路上で証拠品の入った段ボールをリアムからクロエへ引き渡した。</p>
+            <h2>4. 結語 CONCLUSION</h2>
+            <p>本件は遺産目的の計画的共犯である。逮捕時にクロエが捜査官を負傷させたため、厳罰が下る見通しである。</p>
 
-    <p><strong>8月27日 朝7時頃</strong><br>
-    クロエ・デイビスが遠隔操作によりエアコンを停止。腐敗を進行させ、発見時の捜査を混乱させた。</p>
+            <div class="signature">
+                ETHAN RYKER, Special Investigator, ZNIB<br>
+                イーサン・ライカー 特別捜査官
+            </div>
 
-    <h2>4. 結語 CONCLUSION</h2>
-    <p>動機は遺産の独占を目的としたものであり、犯行後には巧妙な工作が行われていた。また、逮捕時にクロエ・デイビスがレベッカ捜査官に負傷を負わせたため、加重処罰が適用される見込みである。</p>
-
-    <div class="signature">
-        ETHAN RYKER<br>
-        Special Investigator, ZNIB<br>
-        イーサン・ライカー<br>
-        ザルヴィア国家捜査局 特別捜査官
-    </div>
-
-    <div class="footer-note">
-        ※本作品はフィクションとして制作されたものであり、登場する名称・人物・組織等はすべて架空です。
-    </div>
-
-    <div class="walkthrough">
-        <h3>導線解説：事件の真相への道筋</h3>
-        <p><strong>1. 嘘を見抜く</strong><br>
-        クロエの「刺青はない」という証言と写真の矛盾。さらに留学記録から二人の旧知の仲が判明。共犯の可能性が確定します。</p>
-        
-        <p><strong>2. アリバイと人間関係</strong><br>
-        互いをかばい合う証言そのものが共犯関係の証拠となります。</p>
-
-        <p><strong>3. 物的証拠</strong><br>
-        電気・水道の異常データと、マーカスが感じた「冷気」が合致。段ボール内のDNA一致が決定打となります。</p>
-        
-        <p><strong>まとめ</strong><br>
-        これらを総合すれば、真犯人はクロエ・デイビスとリアム・オコネルの二人だと断定できます。</p>
-    </div>
-</div>
-
-</body>
-</html>
+            <div class="walkthrough">
+                <h3>🔍 導線解説</h3>
+                <p>刺青の矛盾からクロエの嘘を見抜き、過去の繋がりから共犯を特定。生活インフラ（電気・水道）のデータと物理的
