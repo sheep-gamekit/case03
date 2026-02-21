@@ -9,7 +9,7 @@
         body { background-color: #e0e0e0; color: #1a1a1a; font-family: "Hiragino Mincho ProN", "MS PMincho", serif; line-height: 1.8; margin: 0; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; }
         .report-container { background-color: #ffffff; width: 100%; max-width: 850px; padding: 60px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border: 1px solid #bbb; box-sizing: border-box; }
         
-        /* 1. 一番上の犯人名修正（改行追加） */
+        /* 犯人名（一番上・中央・改行） */
         .culprit-announcement { text-align: center; font-size: 1.3rem; font-weight: bold; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
         
         .header-section { display: flex; align-items: flex-start; margin-bottom: 30px; }
@@ -18,7 +18,6 @@
         .agency-name { font-size: 18px; font-weight: bold; letter-spacing: 0.05em; }
         .report-title { font-size: 26px; font-weight: bold; margin-top: 5px; }
         
-        /* 2. ケースタイトルの修正（Cold Case: Smith） */
         .case-info { font-family: "Courier New", Courier, monospace; font-size: 14px; margin: 20px 0 40px 0; line-height: 1.4; }
         
         h2 { font-size: 20px; border-bottom: 1px solid #333; margin-top: 40px; padding-bottom: 5px; }
@@ -30,18 +29,8 @@
         .center { text-align: center; }
         hr { border: 0; border-top: 1px dashed #999; margin: 40px 0; }
 
-        /* PDFリンク用のボタンデザイン */
-        .pdf-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #1a1a1a;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
+        /* PDFリンクボタン */
+        .pdf-link { display: inline-block; margin-top: 20px; padding: 12px 25px; background-color: #1a1a1a; color: #fff; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
         .pdf-link:hover { background-color: #555; }
 
         @media (max-width: 600px) { .report-container { padding: 25px; } .header-section { flex-direction: column; align-items: center; text-align: center; } .logo { margin-right: 0; margin-bottom: 15px; } table { font-size: 11px; } }
@@ -73,37 +62,69 @@
     </div>
 
     <h2>1. 概要 OVERVIEW</h2>
-    <p>本報告は、10年前に発生した「スミス家夫婦殺害事件」に関する再捜査の最終結果を記録したものである。クロエ・デイビスとリアム・オコネルの共犯関与が立証された。</p>
+    <p>本報告は、10年前に発生した「スミス家夫婦殺害事件」に関する再捜査の最終結果を記録したものである。新たに押収された証拠および関係者の供述の精査により、クロエ・デイビスとリアム・オコネルの共犯関与が立証され、両名は逮捕された。</p>
 
     <h2>2. 証拠分析 EVIDENCE ANALYSIS</h2>
     <ul>
-        <li>ソフィア・トンプソン宅から血痕の付いた衣類、分解状態の拳銃、及びナイフを押収。</li>
-        <li>電気使用量（19:00異常）：冷房強稼働による遺体冷却の痕跡。</li>
-        <li>水道使用量（20:00異常）：浴槽での流水による死亡推定時刻の偽装。</li>
+        <li>ソフィア・トンプソン宅のガレージに保管されていた段ボールを押収。内部から血痕の付いた衣類数点、分解状態の拳銃、及びナイフを発見。</li>
+        <li>DNA鑑定の結果、血痕はスミス夫妻のものと一致。</li>
+        <li>電気使用量記録（8月25日19時の異常値）は、遺体冷却のために冷房が強稼働されたことを示す。</li>
+        <li>水道使用量記録（8月25日20時の異常値）は、浴槽での流水および氷投入による偽装工作を示す。</li>
+        <li>関係者のアリバイ表との照合により、複数の虚偽供述が判明。</li>
     </ul>
 
     <h2>3. 供述要約 STATEMENT SUMMARY</h2>
-    <p><strong>8月25日 19時頃</strong><br>
-    クロエ・デイビスがマイケル・スミスを銃で殺害。遺体を冷房で冷却し、カフェへ。リアム・オコネルは別行動でアリバイを確保。</p>
+    <p><strong>8月25日 19時頃（事件当日）</strong><br>
+    クロエ・デイビスがマイケル・スミスを銃で殺害。血痕の付いた衣類と拳銃を段ボールに収納し、冷房を強く稼働させ遺体を冷却、腐敗を遅延させた。その後クロエはカフェで食事を取り、表向きのアリバイを構築した。同時刻、リアム・オコネルはジョージ・クーパーと共に買い物を行い、計画的にアリバイを確保していた。</p>
+
     <p><strong>8月25日 20時頃</strong><br>
-    リアム・オコネルがエミリー・スミスをナイフで殺害。浴槽で冷却し時刻を偽装。その後、クロエが用意した段ボールに証拠品を入れ、現場を離脱。</p>
+    エミリー・スミスが帰宅。リアム・オコネルはナイフでエミリーを殺害。遺体を浴槽に沈め、蛇口を全開にして水を流し続け、さらに冷凍庫の氷を投入し、死亡推定時刻を不明瞭にした。犯行後、リアムはクロエが残した段ボールに自身の血痕で汚れた衣類とナイフを追加で収納し、現場から離脱した。</p>
+
+    <p><strong>同日 21時〜23時頃</strong><br>
+    クロエ・デイビスとリアム・オコネルは、ジョージ・クーパーおよびジェシー・ダルトンと共に映画館に赴いた。4名が揃って上映を終えるまで滞在した事実により、クロエとリアムは互いの行動を補強しつつ、第三者による証言も確保する形でアリバイを構築した。映画終了後に解散したのち、監視のない路上でリアムがクロエに段ボールを手渡した。</p>
+
+    <p><strong>8月27日 朝7時頃（遺体発見当日）</strong><br>
+    クロエ・デイビスが遠隔操作によりエアコンを停止。冷却を解除することで遺体の腐敗が進行し、発見時には死亡推定時刻がさらに不明瞭になっていた。</p>
 
     <h2>4. 結語 CONCLUSION</h2>
-    <p>遺産目的の計画的共犯である。逮捕時にクロエが捜査官を負傷させたため、加重処罰が適用される見込み。</p>
+    <p>本件は、クロエ・デイビスおよびリアム・オコネル両名による計画的な共犯犯行であることが、証拠および供述により立証された。動機は遺産の独占を目的としたものであり、犯行後には巧妙なアリバイ工作と証拠隠滅が行われていた。また、逮捕時にはクロエ・デイビスがナイフでレベッカ捜査官に襲いかかり、同捜査官が負傷する事態が発生した。この行為により、クロエ・デイビスには加重処罰が適用される見込みである。</p>
 
     <div class="signature">
         ETHAN RYKER, Special Investigator, ZNIB<br>
-        イーサン・ライカー 特別捜査官
+        イーサン・ライカー ザルヴィア国家捜査局 特別捜査官
     </div>
 
     <hr>
 
     <h2>導線解説</h2>
+    <p>この資料は、事件の真相にたどり端くための「道筋」を整理したものです。どの証拠から調べても、最終的にはクロエとリアムの共犯に行き着くようになっています。</p>
+
     <h3>1. 嘘を見抜く</h3>
-    <p>クロエの刺青の嘘と、二人の過去の繋がりから共犯の可能性を特定。</p>
-    <h3>2. 犯人と犯行の役割</h3>
+    <p>・クロエは「刺青はない」と証言した。<br>
+    ・しかし写真には、リアムと同じ「Salem」の刺青が写っている。<br>
+    → クロエは嘘をついている人物 と確定する。<br>
+    さらに、留学記録からリアムがクロエ宅にホームステイしていた過去が判明。「事件直前に知り合った」という二人の証言も虚偽である。二人が一緒に嘘をついている＝共犯の可能性が高い と分かる。</p>
+
+    <h3>2. 人間関係を分析する</h3>
+    <p>・クロエとリアムは過去から深く結びついていた。<br>
+    ・映画当夜の証言でも互いをかばい合い、アリバイを保証し合っている。<br>
+    アリバイの相互保証＝共犯関係の証拠 となる。</p>
+
+    <h3>3. アリバイを検証する</h3>
+    <p>・アリバイ表では、クロエとリアムに「本人申告のみ」「未裏付け」の時間が複数ある。<br>
+    ・ジェシーやジョージにも隙はあるが、決定的な矛盾はない。<br>
+    嘘＋未裏付け時間が重なるのはクロエとリアムだけ。</p>
+
+    <h3>4. 物的証拠で裏付ける</h3>
+    <p>・電気使用量（19:00の異常）：冷房を強くかけて遺体の腐敗を遅らせた。<br>
+    ・水道使用量（20:00の異常）：遺体を浴槽に入れ、水を流し続けて体温を下げ、死亡推定時刻を不明瞭にした。<br>
+    ・マーカスの証言（玄関から冷気が漏れていた）とも一致する。<br>
+    さらに、ソフィア宅の段ボールから押収された血痕付き衣類・分解銃・ナイフ が決定打となり、血痕はスミス夫妻のものとDNA一致した。</p>
+
+    <h3>5. 犯人と犯行の役割</h3>
     <p>・クロエ → 銃でマイケル・スミスを殺害。<br>
-       ・リアム → ナイフでエミリー・スミスを殺害。</p>
+       ・リアム → ナイフでエミリー・スミスを殺害。<br>
+       ・二人で証拠隠滅を図り、段ボールに凶器や衣類を隠した。</p>
 
     <hr>
 
@@ -113,11 +134,12 @@
             <tr><th class="center">No.</th><th>捜査項目</th><th>判定基準</th><th class="center">配点</th><th class="center">得点</th></tr>
         </thead>
         <tbody>
-            <tr><td class="center">1</td><td>犯人が共犯であることに気づいた</td><td>クロエとリアムを特定</td><td class="center">6</td><td class="center">□</td></tr>
-            <tr><td class="center">2</td><td>クロエの刺青の矛盾</td><td>証言の嘘を指摘</td><td class="center">2</td><td class="center">□</td></tr>
-            <tr><td class="center">3</td><td>電気使用量（19:00）</td><td>冷房での冷却を推理</td><td class="center">4</td><td class="center">□</td></tr>
-            <tr><td class="center">4</td><td>水道使用量（20:00）</td><td>浴槽での偽装を推理</td><td class="center">4</td><td class="center">□</td></tr>
-            <tr><td class="center">5</td><td>証拠の遺棄</td><td>ソフィア宅への証拠送付を把握</td><td class="center">4</td><td class="center">□</td></tr>
+            <tr><td class="center">1</td><td>犯人が共犯であることに気づいた</td><td>クロエとリアムを共犯として特定できた</td><td class="center">6</td><td class="center">□</td></tr>
+            <tr><td class="center">2</td><td>クロエの刺青の矛盾に気づいた</td><td>「刺青なし」という証言が嘘だと指摘できた</td><td class="center">2</td><td class="center">□</td></tr>
+            <tr><td class="center">3</td><td>留学記録から過去の関係を突き止めた</td><td>リアムがクロエ宅に滞在していたことを見抜いた</td><td class="center">2</td><td class="center">□</td></tr>
+            <tr><td class="center">4</td><td>電気使用量の異常（19:00）を説明できた</td><td>冷房で遺体偽装をしたと推理できた</td><td class="center">4</td><td class="center">□</td></tr>
+            <tr><td class="center">5</td><td>水道使用量の異常（20:00）を説明できた</td><td>死亡推定時刻を不明瞭にしたと推理できた</td><td class="center">4</td><td class="center">□</td></tr>
+            <tr><td class="center">6</td><td>伝票＋血の布が隠蔽工作と理解できた</td><td>クロエがソフィア宛に証拠を送ったと結びつけられた</td><td class="center">2</td><td class="center">□</td></tr>
         </tbody>
     </table>
 
@@ -126,8 +148,9 @@
         <h3 style="text-decoration: none; font-size: 2rem; margin: 10px 0;">COMPLETE</h3>
         <p>捜査官、素晴らしい仕事でした。<br>あなたの鋭い洞察により、10年の時を経て真実が解き明かされました。</p>
         
+        <img src="certificate.png" alt="任務完了証" style="width: 100%; max-width: 500px; border: 1px solid #333; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+        
         <a href="certificate.pdf" target="_blank" class="pdf-link">任務完了証（PDF）をダウンロード</a>
-        <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">※高画質で印刷・保存が可能です</p>
     </div>
 
     <div class="footer-note" style="margin-top: 50px; font-size: 11px; text-align: center; color: #888;">
