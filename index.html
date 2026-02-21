@@ -3,56 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex"> <title>CASE:03 ANSWER KEY</title>
+    <meta name="robots" content="noindex">
+    <title>CASE:03 FINAL REPORT</title>
     <style>
         body {
-            /* あずささんのアンバー背景をイメージしたグラデーション */
-            background: radial-gradient(circle, #c47000 0%, #8a4b00 100%);
-            color: white;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #e0e0e0; /* 薄いグレーの背景 */
+            color: #333;
+            font-family: "Hiragino Mincho ProN", "MS PMincho", serif; /* 報告書らしく明朝体系 */
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
         }
-        .container {
-            padding: 20px;
-            border: 1px solid rgba(255,255,255,0.3);
-            background: rgba(0,0,0,0.2);
-            border-radius: 10px;
+
+        .report-container {
+            background-color: #ffffff; /* 報告書本体は白 */
+            width: 100%;
+            max-width: 800px;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            border: 1px solid #ccc;
         }
-        h1 {
-            font-size: 24px; /* 14ptより少し大きく、スマホで見やすく */
-            letter-spacing: 0.2em;
-            margin-bottom: 20px;
+
+        /* ロゴとタイトル部分のレイアウト */
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
         }
-        p {
-            font-size: 16px; /* 10pt相当の読みやすさ */
-            line-height: 1.6;
+
+        .logo {
+            width: 120px; /* ロゴのサイズ調整 */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .agency-name {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+
+        .report-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
+
+        .case-info {
+            font-family: monospace;
+            font-size: 14px;
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #eee;
             margin-bottom: 30px;
         }
-        .answer-content {
-            font-size: 20px;
+
+        h2 {
+            font-size: 18px;
+            border-left: 5px solid #333;
+            padding-left: 10px;
+            margin-top: 30px;
+            background: #f4f4f4;
+        }
+
+        .highlight-red {
+            color: #d93025;
             font-weight: bold;
-            background: white;
-            color: #8a4b00;
-            padding: 15px 30px;
-            border-radius: 5px;
-            display: inline-block;
+        }
+
+        .signature {
+            margin-top: 50px;
+            text-align: right;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .footer-note {
+            font-size: 12px;
+            color: #888;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* 導線解説セクション（少し雰囲気を変える） */
+        .walkthrough {
+            margin-top: 60px;
+            padding: 30px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .walkthrough h3 {
+            border-bottom: 1px solid #aaa;
+            padding-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .header-section { flex-direction: column; align-items: center; text-align: center; }
+            .logo { margin-right: 0; margin-bottom: 20px; }
+            .report-container { padding: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>ANSWER KEY</h1>
-        <p>事件の真相へ到達しました。<br>解答を確認してください。</p>
-        
-        <div class="answer-content">
-            正解は「〇〇〇〇」です
+
+<div class="report-container">
+    <div class="header-section">
+        <img src="logo.png" alt="ZNIB LOGO" class="logo">
+        <div class="header-text">
+            <div class="agency-name">ZALVIAN NATIONAL INVESTIGATION BUREAU</div>
+            <div class="report-title">FINAL REPORT / 最終報告書</div>
         </div>
     </div>
+
+    <div class="case-info">
+        CASE FILE: Z-826-HM<br>
+        CASE TITLE: Cold Case :Smith<br>
+        FILED BY: ETHAN RYKER SPECIAL INVESTIGATOR<br>
+        DATE: 09-05-Z2025<br>
+        CLASSIFICATION: CONFIDENTIAL
+    </div>
+
+    <p>
+        cold case:Smithの犯人は、<br>
+        <span class="highlight-red">クロエ・デイビス</span> および <span class="highlight-red">リアム・オコネル</span> である。
+    </p>
+
+    <h2>1. 概要 OVERVIEW</h2>
+    <p>本報告は、10年前に発生した「スミス家夫婦殺害事件」に関する再捜査の最終結果を記録したものである。新たに押収された証拠および関係者の供述の精査により、クロエ・デイビスとリアム・オコネルの共犯関与が立証され、両名は逮捕された。</p>
+
+    <h2>2. 証拠分析 EVIDENCE ANALYSIS</h2>
+    <ul>
+        <li>ソフィア・トンプソン宅のガレージに保管されていた段ボールを押収。内部から血痕の付いた衣類数点、分解状態の拳銃、及びナイフを発見。</li>
+        <li>DNA鑑定の結果、血痕はスミス夫妻のものと一致。</li>
+        <li>電気使用量記録（8月25日19時の異常値）は、遺体冷却のために冷房が強稼働されたことを示す。</li>
+        <li>水道使用量記録（8月25日20時の異常値）は、浴槽での流水および氷投入による偽装工作を示す。</li>
+        <li>関係者のアリバイ表との照合により、複数の虚偽供述が判明。</li>
+    </ul>
+
+    <h2>3. 供述要約 STATEMENT SUMMARY</h2>
+    <p><strong>8月25日 19時頃（事件当日）</strong><br>
+    クロエ・デイビスがマイケル・スミスを銃で殺害。冷房を強く稼働させ遺体を冷却し、その後カフェでアリバイを構築した。同時刻、リアム・オコネルは第三者との買い物によりアリバイを確保していた。</p>
+    
+    <p><strong>8月25日 20時頃</strong><br>
+    エミリー・スミスが帰宅。リアム・オコネルはナイフで殺害後、遺体を浴槽で冷却し、死亡推定時刻を不明瞭にした。</p>
+
+    <p><strong>同日 21時〜23時頃</strong><br>
+    両名は映画館に赴き、互いのアリバイを補強。終了後に路上で証拠品の入った段ボールをリアムからクロエへ引き渡した。</p>
+
+    <p><strong>8月27日 朝7時頃</strong><br>
+    クロエ・デイビスが遠隔操作によりエアコンを停止。腐敗を進行させ、発見時の捜査を混乱させた。</p>
+
+    <h2>4. 結語 CONCLUSION</h2>
+    <p>動機は遺産の独占を目的としたものであり、犯行後には巧妙な工作が行われていた。また、逮捕時にクロエ・デイビスがレベッカ捜査官に負傷を負わせたため、加重処罰が適用される見込みである。</p>
+
+    <div class="signature">
+        ETHAN RYKER<br>
+        Special Investigator, ZNIB<br>
+        イーサン・ライカー<br>
+        ザルヴィア国家捜査局 特別捜査官
+    </div>
+
+    <div class="footer-note">
+        ※本作品はフィクションとして制作されたものであり、登場する名称・人物・組織等はすべて架空です。
+    </div>
+
+    <div class="walkthrough">
+        <h3>導線解説：事件の真相への道筋</h3>
+        <p><strong>1. 嘘を見抜く</strong><br>
+        クロエの「刺青はない」という証言と写真の矛盾。さらに留学記録から二人の旧知の仲が判明。共犯の可能性が確定します。</p>
+        
+        <p><strong>2. アリバイと人間関係</strong><br>
+        互いをかばい合う証言そのものが共犯関係の証拠となります。</p>
+
+        <p><strong>3. 物的証拠</strong><br>
+        電気・水道の異常データと、マーカスが感じた「冷気」が合致。段ボール内のDNA一致が決定打となります。</p>
+        
+        <p><strong>まとめ</strong><br>
+        これらを総合すれば、真犯人はクロエ・デイビスとリアム・オコネルの二人だと断定できます。</p>
+    </div>
+</div>
+
 </body>
 </html>
