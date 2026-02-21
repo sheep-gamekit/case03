@@ -7,70 +7,30 @@
     <title>CASE:03 FINAL REPORT</title>
     <style>
         body {
-            background-color: #e0e0e0; /* 薄いグレーの背景 */
-            color: #333;
+            background-color: #e0e0e0; /* 背景は薄いグレー */
+            color: #1a1a1a;
             font-family: "Hiragino Mincho ProN", "MS PMincho", serif;
-            line-height: 1.6;
+            line-height: 1.8;
             margin: 0;
-            padding: 0;
-        }
-
-        /* 1. 犯人を一番目立たせるセクション */
-        .culprit-header {
-            height: 50vh; /* ページの半分（50%）を使用 */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background-color: #e0e0e0;
-        }
-
-        .culprit-title {
-            font-size: 1.2rem;
-            letter-spacing: 0.2em;
-            margin-bottom: 10px;
-        }
-
-        .culprit-names {
-            font-size: 3rem; /* 犯人名を巨大に */
-            font-weight: bold;
-            color: #d93025; /* 警告の赤 */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .scroll-hint {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #777;
-            animation: blink 2s infinite;
-        }
-        @keyframes blink { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
-
-        /* 2. 報告書本体（ページ後半から開始） */
-        .report-wrapper {
+            padding: 50px 20px;
             display: flex;
             justify-content: center;
-            padding-bottom: 100px;
         }
 
         .report-container {
-            background-color: #ffffff;
+            background-color: #ffffff; /* 中身は白 */
             width: 100%;
-            max-width: 800px;
+            max-width: 850px;
             padding: 60px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.15);
-            border: 1px solid #ccc;
-            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border: 1px solid #bbb;
         }
 
-        /* 3. 報告書の開始と同時にロゴを左に配置 */
+        /* 報告書の始まりにロゴを配置 */
         .header-section {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .logo {
@@ -79,110 +39,39 @@
             margin-right: 20px;
         }
 
-        .agency-info {
+        .header-text {
             flex: 1;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 10px;
         }
 
         .agency-name {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
             letter-spacing: 0.05em;
         }
 
-        .report-type {
-            font-size: 22px;
+        .report-title {
+            font-size: 26px;
             font-weight: bold;
             margin-top: 5px;
         }
 
         .case-info {
-            font-family: monospace;
-            font-size: 13px;
-            background: #f9f9f9;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            margin: 20px 0 40px 0;
+            line-height: 1.4;
+        }
+
+        .culprit-section {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
             padding: 15px;
-            border: 1px solid #eee;
-            margin-bottom: 30px;
+            border: 1px double #333;
         }
 
         h2 {
-            font-size: 18px;
-            border-left: 5px solid #333;
-            padding-left: 10px;
-            margin-top: 40px;
-            background: #f4f4f4;
-        }
-
-        .signature {
-            margin-top: 50px;
-            text-align: right;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
-
-        .walkthrough {
-            margin-top: 60px;
-            padding: 30px;
-            background-color: #f7f7f7;
-            border-radius: 5px;
-            border: 1px dashed #ccc;
-        }
-
-        @media (max-width: 600px) {
-            .culprit-names { font-size: 2rem; }
-            .report-container { padding: 20px; }
-            .logo { width: 70px; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="culprit-header">
-        <div class="culprit-title">COLD CASE: SMITH 真犯人</div>
-        <div class="culprit-names">
-            クロエ・デイビス<br>
-            リアム・オコネル
-        </div>
-        <div class="scroll-hint">▼ 詳細報告書を確認する</div>
-    </div>
-
-    <div class="report-wrapper">
-        <div class="report-container">
-            <div class="header-section">
-                <img src="logo.png" alt="ZNIB LOGO" class="logo">
-                <div class="agency-info">
-                    <div class="agency-name">ZALVIAN NATIONAL INVESTIGATION BUREAU</div>
-                    <div class="report-type">FINAL REPORT / 最終報告書</div>
-                </div>
-            </div>
-
-            <div class="case-info">
-                CASE FILE: Z-826-HM<br>
-                CASE TITLE: Cold Case :Smith<br>
-                FILED BY: ETHAN RYKER SPECIAL INVESTIGATOR<br>
-                DATE: 09-05-Z2025<br>
-                CLASSIFICATION: CONFIDENTIAL
-            </div>
-
-            <h2>1. 概要 OVERVIEW</h2>
-            <p>本報告は、10年前に発生した「スミス家夫婦殺害事件」に関する再捜査の最終結果を記録したものである。クロエ・デイビスとリアム・オコネルの共犯関与が立証された。</p>
-
-            <h2>2. 証拠分析 EVIDENCE ANALYSIS</h2>
-            <p>ソフィア・トンプソン宅から押収された段ボールより、血痕の付いた衣類、拳銃、ナイフを発見。DNAは被害者夫妻と一致。電気・水道の使用量記録が犯行時刻の工作を裏付けている。</p>
-
-            <h2>3. 供述要約 STATEMENT SUMMARY</h2>
-            <p><strong>19:00：</strong>クロエが銃で殺害。冷房で遺体を冷却。<br>
-               <strong>20:00：</strong>リアムが帰宅したエミリーをナイフで殺害。浴槽で冷却し死亡推定時刻を偽装。<br>
-               <strong>21:00：</strong>両名は映画館でアリバイを工作。終了後に路上で証拠品を授受。<br>
-               <strong>発見当日：</strong>クロエが遠隔操作でエアコンを停止し、腐敗を進行させた。</p>
-
-            <h2>4. 結語 CONCLUSION</h2>
-            <p>本件は遺産目的の計画的共犯である。逮捕時にクロエが捜査官を負傷させたため、厳罰が下る見通しである。</p>
-
-            <div class="signature">
-                ETHAN RYKER, Special Investigator, ZNIB<br>
-                イーサン・ライカー 特別捜査官
-            </div>
-
-            <div class="walkthrough">
-                <h3>🔍 導線解説</h3>
-                <p>刺青の矛盾からクロエの嘘を見抜き、過去の繋がりから共犯を特定。生活インフラ（電気・水道）のデータと物理的
+            font-size: 20px;
+            border-bottom: 1px solid #333;
+            margin-top: 40
