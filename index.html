@@ -6,129 +6,24 @@
     <meta name="robots" content="noindex">
     <title>CASE:03 FINAL REPORT</title>
     <style>
-        body {
-            background-color: #e0e0e0; /* 背景は薄いグレー */
-            color: #1a1a1a;
-            font-family: "Hiragino Mincho ProN", "MS PMincho", serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .report-container {
-            background-color: #ffffff; /* 中身は白 */
-            width: 100%;
-            max-width: 850px;
-            padding: 60px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border: 1px solid #bbb;
-            box-sizing: border-box;
-        }
-
-        /* 犯人名を白枠内の一番上・真ん中に配置 */
-        .culprit-announcement {
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        /* 報告書の開始位置にロゴ */
-        .header-section {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
-
-        .logo {
-            width: 100px;
-            height: auto;
-            margin-right: 20px;
-        }
-
-        .header-text {
-            flex: 1;
-            border-bottom: 2px solid #1a1a1a;
-            padding-bottom: 10px;
-        }
-
-        .agency-name {
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 0.05em;
-        }
-
-        .report-title {
-            font-size: 26px;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-        .case-info {
-            font-family: "Courier New", Courier, monospace;
-            font-size: 14px;
-            margin: 20px 0 40px 0;
-            line-height: 1.4;
-        }
-
-        h2 {
-            font-size: 20px;
-            border-bottom: 1px solid #333;
-            margin-top: 40px;
-            padding-bottom: 5px;
-        }
-
-        h3 {
-            font-size: 18px;
-            margin-top: 30px;
-            text-decoration: underline;
-        }
-
-        .signature {
-            margin-top: 60px;
-            text-align: right;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        th, td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px dashed #999;
-            margin: 40px 0;
-        }
-
-        @media (max-width: 600px) {
-            .report-container { padding: 25px; }
-            .header-section { flex-direction: column; align-items: center; text-align: center; }
-            .logo { margin-right: 0; margin-bottom: 15px; }
-            table { font-size: 11px; }
-        }
+        body { background-color: #e0e0e0; color: #1a1a1a; font-family: "Hiragino Mincho ProN", "MS PMincho", serif; line-height: 1.8; margin: 0; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; }
+        .report-container { background-color: #ffffff; width: 100%; max-width: 850px; padding: 60px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border: 1px solid #bbb; box-sizing: border-box; }
+        .culprit-announcement { text-align: center; font-size: 1.3rem; font-weight: bold; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .header-section { display: flex; align-items: flex-start; margin-bottom: 30px; }
+        .logo { width: 100px; height: auto; margin-right: 20px; }
+        .header-text { flex: 1; border-bottom: 2px solid #1a1a1a; padding-bottom: 10px; }
+        .agency-name { font-size: 18px; font-weight: bold; letter-spacing: 0.05em; }
+        .report-title { font-size: 26px; font-weight: bold; margin-top: 5px; }
+        .case-info { font-family: "Courier New", Courier, monospace; font-size: 14px; margin: 20px 0 40px 0; line-height: 1.4; }
+        h2 { font-size: 20px; border-bottom: 1px solid #333; margin-top: 40px; padding-bottom: 5px; }
+        h3 { font-size: 18px; margin-top: 30px; text-decoration: underline; }
+        .signature { margin-top: 60px; text-align: right; border-top: 1px solid #eee; padding-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+        th, td { border: 1px solid #333; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .center { text-align: center; }
+        hr { border: 0; border-top: 1px dashed #999; margin: 40px 0; }
+        @media (max-width: 600px) { .report-container { padding: 25px; } .header-section { flex-direction: column; align-items: center; text-align: center; } .logo { margin-right: 0; margin-bottom: 15px; } table { font-size: 11px; } }
     </style>
 </head>
 <body>
@@ -156,113 +51,63 @@
     </div>
 
     <h2>1. 概要 OVERVIEW</h2>
-    <p>本報告は、10年前に発生した「スミス家夫婦殺害事件」に関する再捜査の最終結果を記録したものである。新たに押収された証拠および関係者の供述の精査により、クロエ・デイビスとリアム・オコネルの共犯関与が立証され、両名は逮捕された。</p>
+    <p>本報告は、10年前に発生した「スミス家夫婦殺害事件」に関する再捜査の最終結果を記録したものである。クロエ・デイビスとリアム・オコネルの共犯関与が立証された。</p>
 
     <h2>2. 証拠分析 EVIDENCE ANALYSIS</h2>
     <ul>
-        <li>ソフィア・トンプソン宅のガレージに保管されていた段ボールを押収。内部から血痕の付いた衣類数点、分解状態の拳銃、及びナイフを発見。</li>
-        <li>DNA鑑定の結果、血痕はスミス夫妻のものと一致。</li>
-        <li>電気使用量記録（8月25日19時の異常値）は、遺体冷却のために冷房が強稼働されたことを示す。</li>
-        <li>水道使用量記録（8月25日20時の異常値）は、浴槽での流水および氷投入による偽装工作を示す。</li>
-        <li>関係者のアリバイ表との照合により、複数の虚偽供述が判明。</li>
+        <li>ソフィア・トンプソン宅から血痕の付いた衣類、分解状態の拳銃、及びナイフを押収。</li>
+        <li>電気使用量（19:00異常）：冷房強稼働による遺体冷却の痕跡。</li>
+        <li>水道使用量（20:00異常）：浴槽での流水による死亡推定時刻の偽装。</li>
     </ul>
 
     <h2>3. 供述要約 STATEMENT SUMMARY</h2>
-    <p><strong>8月25日 19時頃（事件当日）</strong><br>
-    <strong>クロエ・デイビスがマイケル・スミスを銃で殺害。</strong>血痕の付いた衣類と拳銃を段ボールに収納し、冷房を強く稼働させ遺体を冷却。その後クロエはカフェでアリバイを構築した。同時刻、リアム・オコネルは第三者と買い物を行い、計画的にアリバイを確保していた。</p>
-
+    <p><strong>8月25日 19時頃</strong><br>
+    クロエ・デイビスがマイケル・スミスを銃で殺害。遺体を冷房で冷却し、カフェへ。リアム・オコネルは別行動でアリバイを確保。</p>
     <p><strong>8月25日 20時頃</strong><br>
-    エミリー・スミスが帰宅。<strong>リアム・オコネルはナイフでエミリーを殺害。</strong>遺体を浴槽に沈め、流水と氷を投入して死亡推定時刻を不明瞭にした。犯行後、リアムはクロエが残した段ボールに証拠品を追加し離脱した。</p>
+    リアム・オコネルがエミリー・スミスをナイフで殺害。浴槽で冷却し時刻を偽装。その後、クロエが用意した段ボールに証拠品を入れ、現場を離脱。</p>
 
     <h2>4. 結語 CONCLUSION</h2>
-    <p>本件は、両名による計画的な共犯犯行であることが立証された。動機は遺産の独占であり、逮捕時にクロエが捜査官を負傷させたため、加重処罰が適用される見込みである。</p>
+    <p>遺産目的の計画的共犯である。逮捕時にクロエが捜査官を負傷させたため、加重処罰が適用される見込み。</p>
 
     <div class="signature">
         ETHAN RYKER, Special Investigator, ZNIB<br>
-        イーサン・ライカー ザルヴィア国家捜査局 特別捜査官
+        イーサン・ライカー 特別捜査官
     </div>
 
     <hr>
 
     <h2>導線解説</h2>
-    <p>この資料は、事件の真相にたどり着くための「道筋」を整理したものです。</p>
-
     <h3>1. 嘘を見抜く</h3>
-    <p>・クロエは「刺青はない」と証言したが、写真には「Salem」の刺青が写っていた。これと留学記録を合わせると、二人の「最近知り合った」という嘘が暴かれ、共犯の可能性が浮上する。</p>
-
-    <h3>2. 人間関係を分析する</h3>
-    <p>過去からの深い結びつきと、映画当夜の「互いのアリバイを保証し合う証拠」が共犯関係を決定づける。</p>
-
-    <h3>3. アリバイを検証する</h3>
-    <p>嘘をついており、かつ「本人申告のみ」の未裏付け時間が重なるのは、クロエとリアムだけである。</p>
-
-    <h3>4. 物的証拠で裏付ける</h3>
-    <p>電気・水道の異常値、マーカスの証言、そして段ボールから出た血痕付き衣類と凶器（分解銃・ナイフ）。これらがDNA鑑定で被害者と一致したことが決定打となる。</p>
-
-    <h3>5. 犯人と犯行の役割</h3>
-    <p>・<strong>クロエ → 銃でマイケル・スミスを殺害。</strong><br>
-       ・<strong>リアム → ナイフでエミリー・スミスを殺害。</strong><br>
-       ・二人で証拠隠滅を図り、段ボールに凶器や衣類を隠した。</p>
+    <p>クロエの刺青の嘘と、二人の過去の繋がりから共犯の可能性を特定。</p>
+    <h3>2. 犯人と犯行の役割</h3>
+    <p>・クロエ → 銃でマイケル・スミスを殺害。<br>
+       ・リアム → ナイフでエミリー・スミスを殺害。</p>
 
     <hr>
 
     <h2 class="center">捜査結果チェックシート</h2>
     <table>
         <thead>
-            <tr>
-                <th class="center">No.</th>
-                <th>捜査項目</th>
-                <th>判定基準</th>
-                <th class="center">配点</th>
-                <th class="center">得点</th>
-            </tr>
+            <tr><th class="center">No.</th><th>捜査項目</th><th>判定基準</th><th class="center">配点</th><th class="center">得点</th></tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="center">1</td>
-                <td>犯人が共犯であることに気づいた</td>
-                <td>クロエとリアムを共犯として特定できた</td>
-                <td class="center">6</td>
-                <td class="center">□</td>
-            </tr>
-            <tr>
-                <td class="center">2</td>
-                <td>クロエの刺青の矛盾に気づいた</td>
-                <td>「刺青なし」という証言が嘘だと指摘できた</td>
-                <td class="center">2</td>
-                <td class="center">□</td>
-            </tr>
-            <tr>
-                <td class="center">3</td>
-                <td>留学記録から過去の関係を突き止めた</td>
-                <td>リアムがクロエ宅に滞在していたことを見抜いた</td>
-                <td class="center">2</td>
-                <td class="center">□</td>
-            </tr>
-            <tr>
-                <td class="center">4</td>
-                <td>電気使用量の異常（19:00）を説明できた</td>
-                <td>冷房で遺体偽装をしたと推理できた</td>
-                <td class="center">4</td>
-                <td class="center">□</td>
-            </tr>
-            <tr>
-                <td class="center">5</td>
-                <td>水道使用量の異常（20:00）を説明できた</td>
-                <td>死亡推定時刻を不明瞭にしたと推理できた</td>
-                <td class="center">4</td>
-                <td class="center">□</td>
-            </tr>
-            <tr>
-                <td colspan="3" style="text-align: right; font-weight: bold;">合計</td>
-                <td class="center" style="font-weight: bold;">20</td>
-                <td class="center"></td>
-            </tr>
+            <tr><td class="center">1</td><td>犯人が共犯であることに気づいた</td><td>クロエとリアムを特定</td><td class="center">6</td><td class="center">□</td></tr>
+            <tr><td class="center">2</td><td>クロエの刺青の矛盾</td><td>証言の嘘を指摘</td><td class="center">2</td><td class="center">□</td></tr>
+            <tr><td class="center">3</td><td>電気使用量（19:00）</td><td>冷房での冷却を推理</td><td class="center">4</td><td class="center">□</td></tr>
+            <tr><td class="center">4</td><td>水道使用量（20:00）</td><td>浴槽での偽装を推理</td><td class="center">4</td><td class="center">□</td></tr>
+            <tr><td class="center">5</td><td>証拠の遺棄</td><td>ソフィア宅への証拠送付を把握</td><td class="center">4</td><td class="center">□</td></tr>
         </tbody>
     </table>
 
+    <div style="text-align: center; margin-top: 50px; border-top: 2px solid #eee; padding-top: 40px;">
+        <p style="letter-spacing: 0.5em; font-weight: bold; color: #888;">MISSION STATUS</p>
+        <h3 style="text-decoration: none; font-size: 2rem; margin: 10px 0;">COMPLETE</h3>
+        <p>捜査官、素晴らしい仕事でした。<br>あなたの鋭い洞察により、10年の時を経て真実が解き明かされました。</p>
+        <img src="complete.png" alt="任務完了証（画像がありません）" style="width: 100%; max-width: 400px; border: 1px solid #333; margin-top: 20px;">
+    </div>
+
     <div class="footer-note" style="margin-top: 50px; font-size: 11px; text-align: center; color: #888;">
-        ※本作品はフィクションとして制作されたものであり、登場する名称・人物・組織等はすべて架空です。
+        ※本作品はフィクションです。
     </div>
 </div>
 
