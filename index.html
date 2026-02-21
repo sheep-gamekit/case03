@@ -8,13 +8,19 @@
     <style>
         body { background-color: #e0e0e0; color: #1a1a1a; font-family: "Hiragino Mincho ProN", "MS PMincho", serif; line-height: 1.8; margin: 0; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; }
         .report-container { background-color: #ffffff; width: 100%; max-width: 850px; padding: 60px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border: 1px solid #bbb; box-sizing: border-box; }
+        
+        /* 1. 一番上の犯人名修正（改行追加） */
         .culprit-announcement { text-align: center; font-size: 1.3rem; font-weight: bold; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        
         .header-section { display: flex; align-items: flex-start; margin-bottom: 30px; }
         .logo { width: 100px; height: auto; margin-right: 20px; }
         .header-text { flex: 1; border-bottom: 2px solid #1a1a1a; padding-bottom: 10px; }
         .agency-name { font-size: 18px; font-weight: bold; letter-spacing: 0.05em; }
         .report-title { font-size: 26px; font-weight: bold; margin-top: 5px; }
+        
+        /* 2. ケースタイトルの修正（Cold Case: Smith） */
         .case-info { font-family: "Courier New", Courier, monospace; font-size: 14px; margin: 20px 0 40px 0; line-height: 1.4; }
+        
         h2 { font-size: 20px; border-bottom: 1px solid #333; margin-top: 40px; padding-bottom: 5px; }
         h3 { font-size: 18px; margin-top: 30px; text-decoration: underline; }
         .signature { margin-top: 60px; text-align: right; border-top: 1px solid #eee; padding-top: 20px; }
@@ -23,6 +29,21 @@
         th { background-color: #f2f2f2; }
         .center { text-align: center; }
         hr { border: 0; border-top: 1px dashed #999; margin: 40px 0; }
+
+        /* PDFリンク用のボタンデザイン */
+        .pdf-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .pdf-link:hover { background-color: #555; }
+
         @media (max-width: 600px) { .report-container { padding: 25px; } .header-section { flex-direction: column; align-items: center; text-align: center; } .logo { margin-right: 0; margin-bottom: 15px; } table { font-size: 11px; } }
     </style>
 </head>
@@ -30,8 +51,9 @@
 
 <div class="report-container">
     <div class="culprit-announcement">
-        cold case:Smithの犯人は、<br>
-        クロエ・デイビス、リアム・オコネル
+        Cold Case: Smithの犯人は、<br>
+        クロエ・デイビス、<br>
+        リアム・オコネル
     </div>
 
     <div class="header-section">
@@ -44,7 +66,7 @@
 
     <div class="case-info">
         CASE FILE: Z-826-HM<br>
-        CASE TITLE: Cold Case :Smith<br>
+        CASE TITLE: Cold Case: Smith<br>
         FILED BY: ETHAN RYKER SPECIAL INVESTIGATOR<br>
         DATE: 09-05-Z2025<br>
         CLASSIFICATION: CONFIDENTIAL
@@ -103,7 +125,9 @@
         <p style="letter-spacing: 0.5em; font-weight: bold; color: #888;">MISSION STATUS</p>
         <h3 style="text-decoration: none; font-size: 2rem; margin: 10px 0;">COMPLETE</h3>
         <p>捜査官、素晴らしい仕事でした。<br>あなたの鋭い洞察により、10年の時を経て真実が解き明かされました。</p>
-        <img src="certificate.png" alt="任務完了証（画像がありません）" style="width: 100%; max-width: 400px; border: 1px solid #333; margin-top: 20px;">
+        
+        <a href="certificate.pdf" target="_blank" class="pdf-link">任務完了証（PDF）をダウンロード</a>
+        <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">※高画質で印刷・保存が可能です</p>
     </div>
 
     <div class="footer-note" style="margin-top: 50px; font-size: 11px; text-align: center; color: #888;">
@@ -113,4 +137,3 @@
 
 </body>
 </html>
-
