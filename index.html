@@ -3,56 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex"> <title>CASE:03 ANSWER KEY</title>
+    <meta name="robots" content="noindex">
+    <title>CASE:03 FINAL REPORT</title>
     <style>
         body {
-            /* あずささんのアンバー背景をイメージしたグラデーション */
-            background: radial-gradient(circle, #c47000 0%, #8a4b00 100%);
-            color: white;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #e0e0e0; /* 薄いグレーの背景 */
+            color: #333;
+            font-family: "Hiragino Mincho ProN", "MS PMincho", serif; /* 報告書らしく明朝体系 */
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
         }
-        .container {
-            padding: 20px;
-            border: 1px solid rgba(255,255,255,0.3);
-            background: rgba(0,0,0,0.2);
-            border-radius: 10px;
+
+        .report-container {
+            background-color: #ffffff; /* 報告書本体は白 */
+            width: 100%;
+            max-width: 800px;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            border: 1px solid #ccc;
         }
-        h1 {
-            font-size: 24px; /* 14ptより少し大きく、スマホで見やすく */
-            letter-spacing: 0.2em;
-            margin-bottom: 20px;
+
+        /* ロゴとタイトル部分のレイアウト */
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
         }
-        p {
-            font-size: 16px; /* 10pt相当の読みやすさ */
-            line-height: 1.6;
+
+        .logo {
+            width: 120px; /* ロゴのサイズ調整 */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .agency-name {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+
+        .report-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
+
+        .case-info {
+            font-family: monospace;
+            font-size: 14px;
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #eee;
             margin-bottom: 30px;
         }
-        .answer-content {
-            font-size: 20px;
-            font-weight: bold;
-            background: white;
-            color: #8a4b00;
-            padding: 15px 30px;
-            border-radius: 5px;
-            display: inline-block;
+
+        h2 {
+            font-size: 18px;
+            border-left: 5px solid #333;
+            padding-left: 10px;
+            margin-top: 30px;
+            background: #f4f4f4;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>ANSWER KEY</h1>
-        <p>事件の真相へ到達しました。<br>解答を確認してください。</p>
-        
-        <div class="answer-content">
-            正解は「〇〇〇〇」です
-        </div>
-    </div>
-</body>
-</html>
+
+        .highlight-red {
+            color: #d93025;
+            font-weight: bold;
+        }
+
+        .signature {
+            margin-top: 50px;
+            text-align: right;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .footer-note {
+            font-size: 12px;
+            color: #888;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* 導線解説セクション（少し雰囲気を変える） */
+        .walkthrough {
+            margin-top: 60px;
+            padding: 30px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .walkthrough h3 {
+            border-bottom: 1px solid #aaa;
+            padding-bottom:
