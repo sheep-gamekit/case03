@@ -14,7 +14,18 @@
             margin: 0;
             padding: 50px 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 犯人名を一番上に配置 */
+        .culprit-announcement {
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: left;
         }
 
         .report-container {
@@ -24,9 +35,10 @@
             padding: 60px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             border: 1px solid #bbb;
+            box-sizing: border-box;
         }
 
-        /* 報告書の始まりにロゴを配置 */
+        /* 報告書の開始位置にロゴ */
         .header-section {
             display: flex;
             align-items: flex-start;
@@ -64,13 +76,6 @@
             line-height: 1.4;
         }
 
-        .culprit-section {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            padding: 15px;
-            border: 1px double #333;
-        }
-
         h2 {
             font-size: 20px;
             border-bottom: 1px solid #333;
@@ -91,7 +96,6 @@
             padding-top: 20px;
         }
 
-        /* チェックシートのテーブルデザイン */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -123,11 +127,15 @@
             .report-container { padding: 25px; }
             .header-section { flex-direction: column; align-items: center; text-align: center; }
             .logo { margin-right: 0; margin-bottom: 15px; }
-            table { font-size: 12px; }
+            table { font-size: 11px; }
         }
     </style>
 </head>
 <body>
+
+<div class="culprit-announcement">
+    cold case:Smithの犯人は、クロエ・デイビス、リアム・オコネル
+</div>
 
 <div class="report-container">
     <div class="header-section">
@@ -144,11 +152,6 @@
         FILED BY: ETHAN RYKER SPECIAL INVESTIGATOR<br>
         DATE: 09-05-Z2025<br>
         CLASSIFICATION: CONFIDENTIAL
-    </div>
-
-    <div class="culprit-section">
-        cold case:Smithの犯人は、<br>
-        <strong>クロエ・デイビス</strong>、<strong>リアム・オコネル</strong>
     </div>
 
     <h2>1. 概要 OVERVIEW</h2>
